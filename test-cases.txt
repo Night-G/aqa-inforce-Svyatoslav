@@ -1,0 +1,69 @@
+module name: Room booking
+Test case id: 
+tester name: 
+Prerequisites: 1. stable internet 
+	       2. browser (chrome)
+	       3. being on https://automationintesting.online/ 
+	       4. site should have at least 1 room element
+	       5. click "let me hack!" button
+Environmental information: 1. System: Desktop 
+			   2. OS: Windows
+
+Test case description: To check room booking functionality of automationintesting.online site, with valid data
+  steps: 
+   1.  click first "Book this room" button
+   2.  enter Firstname 				input: "validname" 
+   3.  enter Lastname 				input: "validlastname" 
+   4.  enter email 				input: "valid.email@gmail.com"
+   5.  enter Phone				input: "09999990000" 
+   6.  click "Today" button
+   7.  press and hold left mouse button on blue box in calendar on site
+   8.  move mouse 1 box right and release the button
+   9.  click "Book" button
+ 
+ expected results: 
+   "Booking Successful!"
+ 
+ actual results: 
+   "Booking Successful!" 
+  status: pass
+
+Test case description: To check room booking functionality of automationintesting.online site, with invalid phone
+  steps: 
+   1.  click first "Book this room" button
+   2.  enter Firstname 				input: "validname" 
+   3.  enter Lastname 				input: "validlastname" 
+   4.  enter email 				input: "valid.email@gmail.com"
+   5.  enter Phone 				input: "9999991111" 
+   6.  click "Today" button
+   7.  press and hold left mouse button on blue box in calendar on site
+   8.  move mouse 1 box right and release the button
+   9.  click "Book" button
+ 
+ expected results: 
+   Visible error block with a text: "size must be between 11 and 21"
+  
+actual results: 
+   Visible error block with a text: "size must be between 11 and 21" 
+  status: pass
+
+
+Test case description: To check room that the earlier booked dates are shown as Unavailable
+Prerequisites: Some room should be booked with valid data 
+  steps: 
+   1.  click "Book this room" button for known to be booked room
+   2.  enter Firstname as "validname" 
+   3.  enter Lastname as "validlastname" 
+   4.  enter email as "valid.email@gmail.com"
+   5.  enter Phone as "9999991111" 
+   6.  click "Today" button
+   7.  press and hold left mouse button on blue box in calendar on site
+   8.  move mouse 1 box right and release the button
+   9.  click "Book" button
+  
+expected results: 
+   "The room dates are either invalid or are already booked for one or more of the dates that you have selected." 
+  
+actual results: 
+   "The room dates are either invalid or are already booked for one or more of the dates that you have selected." 
+  status: pass
