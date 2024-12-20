@@ -2,6 +2,13 @@
 Test cases in one file "test-cases.txt"
 
 Source code comes without files of **node modules** and additional files of IDE
+The module: dotenv (16.4.7)
+
+>npm install dotenv --save
+
+Framework: playwright (1.49.1)
+
+>npm init playwright@1.49.1
 
 Used to run with  npx playwright test --ui
 
