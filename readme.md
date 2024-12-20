@@ -8,7 +8,7 @@ The module: dotenv (16.4.7)
 
 Framework: playwright (1.49.1)
 
->npm init playwright@1.49.1
+>npm init playwright
 
 Used to run with  npx playwright test --ui
 
